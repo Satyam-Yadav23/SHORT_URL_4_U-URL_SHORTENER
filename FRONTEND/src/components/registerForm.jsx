@@ -432,6 +432,13 @@ const styles = {
     transition: 'opacity 0.15s',
     marginTop: 4,
   },
+  terms: {
+    fontSize: 11, color: '#555', textAlign: 'center',
+    lineHeight: 1.5, margin: 0,
+  },
+  termsLink: {
+    color: '#e74c3c', cursor: 'pointer',
+  },
   spinner: {
     display: 'inline-block', width: 14, height: 14,
     border: '2px solid rgba(255,255,255,0.3)',

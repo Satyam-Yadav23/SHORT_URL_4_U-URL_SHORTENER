@@ -1,38 +1,73 @@
-# ShortUrl4U — URL Shortener
+<div align="center">
 
-A full-stack URL shortener with QR code generation, click analytics, and user authentication.
+# 🔗 ShortUrl4U
 
-## Tech Stack
+**A modern, full-stack URL shortener with QR code generation, click analytics, and secure authentication.**
 
-**Frontend:** React 19, TanStack Router, Redux Toolkit, Vite, Tailwind CSS  
-**Backend:** Express 5, MongoDB (Mongoose), JWT Auth, Nodemailer, nanoid
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Express](https://img.shields.io/badge/Express-5-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Vite](https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 
-## Features
+</div>
 
-- Shorten any URL instantly (no sign-up required)
-- Generate QR codes for any link
-- User registration & login with JWT
-- Dashboard to view and manage your shortened URLs
-- Click tracking analytics
-- Forgot / reset password via email
+---
 
-## Getting Started
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| **Instant URL Shortening** | Shorten any URL in one click — no sign-up required |
+| **QR Code Generation** | Generate scannable QR codes for any link |
+| **Click Analytics** | Track how many times your shortened links are clicked |
+| **User Dashboard** | Manage all your shortened URLs in one place |
+| **Authentication** | Secure sign-up, login, and password reset via email |
+
+## 🛠 Tech Stack
+
+| Layer | Technologies |
+|-------|-------------|
+| **Frontend** | React 19, TanStack Router, Redux Toolkit, Tailwind CSS, Vite |
+| **Backend** | Express 5, MongoDB (Mongoose), JWT, Nodemailer, nanoid |
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- MongoDB instance (local or Atlas)
+- **Node.js** 18+
+- **MongoDB** (local or [Atlas](https://www.mongodb.com/atlas))
 
-### Backend
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Satyam-Yadav23/URL-Shortener-Project.git
+cd URL-Shortener-Project
+```
+
+**2. Setup Backend**
 
 ```bash
 cd BACKEND
 npm install
-# create a .env file with your MongoDB URI, JWT secret, email config, etc.
+```
+
+Create a `.env` file in `BACKEND/` with:
+
+```env
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_email_app_password
+```
+
+```bash
 npm run dev
 ```
 
-### Frontend
+**3. Setup Frontend**
 
 ```bash
 cd FRONTEND
@@ -40,32 +75,38 @@ npm install
 npm run dev
 ```
 
-The frontend runs on `http://localhost:5173` and the backend on `http://localhost:3000` by default.
+The frontend runs on `http://localhost:5173` and the backend on `http://localhost:3000`.
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-BACKEND/          Express REST API
-  src/
-    config/       App & database config
-    controller/   Route handlers
-    dao/          Data access layer
-    middleware/   Auth middleware
-    models/       Mongoose schemas
-    routes/       API routes
-    services/     Business logic
-    utils/        Helpers & error handling
+BACKEND/                Express REST API
+├── src/
+│   ├── config/         App & database configuration
+│   ├── controller/     Route handlers
+│   ├── dao/            Data access layer
+│   ├── middleware/      Auth middleware (JWT)
+│   ├── models/         Mongoose schemas
+│   ├── routes/         API route definitions
+│   ├── services/       Business logic
+│   └── utils/          Helpers & error handling
 
-FRONTEND/         React SPA
-  src/
-    api/          Axios API calls
-    components/   Reusable UI components
-    pages/        Page components
-    routing/      TanStack Router config
-    store/        Redux store & slices
-    utils/        Axios instance & helpers
+FRONTEND/               React SPA (Vite)
+├── src/
+│   ├── api/            Axios API calls
+│   ├── components/     Reusable UI components
+│   ├── pages/          Page components
+│   ├── routing/        TanStack Router config
+│   ├── store/          Redux store & slices
+│   └── utils/          Axios instance & helpers
 ```
 
-## License
+## 📄 License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/Satyam-Yadav23">Satyam Yadav</a></sub>
+</div>
