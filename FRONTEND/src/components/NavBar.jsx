@@ -108,7 +108,7 @@ const Navbar = () => {
             <Link to="/auth" className="nav-link" style={styles.loginLink}>
               Log In
             </Link>
-            <Link to="/auth" className="cta-btn" style={styles.signupBtn}>
+            <Link to="/auth" search={{ tab: 'register' }} className="cta-btn" style={styles.signupBtn}>
               Sign Up Free
             </Link>
           </>

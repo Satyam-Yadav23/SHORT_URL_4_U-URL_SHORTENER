@@ -1,27 +1,12 @@
-// import React from 'react'
-// import LoginForm from '../components/loginForm.jsx'
-// import RegisterForm from '../components/registerForm.jsx'
-// import { useState } from 'react'
-
-// const AuthPage = () => {
-
-//   const [login, setLogin] = useState(true);
-//   return (
-//     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-//       {login ? <LoginForm state={setLogin}/> : <RegisterForm state={setLogin}/>}
-//     </div>
-//   )
-// }
-
-// export default AuthPage
-
 import React, { useState } from 'react';
+import { useSearch } from '@tanstack/react-router';
 import LoginForm from '../components/loginForm.jsx';
 import RegisterForm from '../components/registerForm.jsx';
 import ForgotPassword from './forgotPassword.jsx';
 
 const AuthPage = () => {
-  const [login, setLogin] = useState(true);
+  const { tab } = useSearch({ from: '/auth' });
+  const [login, setLogin] = useState(tab !== 'register');
   const [showForgot, setShowForgot] = useState(false);
 
   return (

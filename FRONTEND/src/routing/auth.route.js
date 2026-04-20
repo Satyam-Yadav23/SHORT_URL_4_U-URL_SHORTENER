@@ -6,5 +6,8 @@ export const authRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/auth',
     component: AuthPage,
+    validateSearch: (search) => ({
+      tab: search.tab || 'login',
+    }),
   })
   
